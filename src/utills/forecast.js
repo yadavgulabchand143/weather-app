@@ -16,14 +16,17 @@ const foreCast = (latitude, longitude, callback) => {
     } else if (body.error) {
       callback("Unable to Find Location", undefined);
     } else {
+      console.log(body.current);
       callback(
         undefined,
         body.current.weather_descriptions[0] +
           ". it is currently " +
           body.current.temperature +
-          " degrees out. there is a " +
+          " degrees out. it feels like " +
           body.current.feelslike +
-          " degress out."
+          " degress out. The humidity is " +
+          body.current.humidity +
+          "%"
       );
     }
   });
