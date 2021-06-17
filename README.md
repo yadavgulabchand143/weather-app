@@ -8,6 +8,6 @@ This project is for displaying weather data
 
 $ npm install
 
-# serve with hot reload at localhost:3000
+# Run at localhost:3000
 
 $ npm run dev
